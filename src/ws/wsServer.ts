@@ -11,7 +11,7 @@ interface AuthedWs extends WebSocket {
   userId?: string;
 }
 
-const AI_WS_URL = process.env.AI_WS_URL || 'ws://localhost:8000/ws/generate';
+const AI_WS_URL = process.env.AI_WS_URL || 'ws://ai-chatbot-ai-service.onrender.com/ws/generate';
 
 export function createWsServer(server: HttpServer) {
   const wss = new WebSocketServer({ server, path: '/ws/chat' });
